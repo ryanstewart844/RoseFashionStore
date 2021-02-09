@@ -2,17 +2,22 @@
 <html lang="en">    
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Rose | Ecommerce Fashion Design</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <!--------------------header slider-------->
     
     
  
 <!----------------------------------------------->
 </head>
+
+<body>
 
 <body>
    <div class="header">
@@ -56,21 +61,28 @@
        </div>
        </div>
 <!------------------ featured categories --------------->
-     <div class="categories">
-         <div class="small-container">
-           <div class="row">
-               <div class="col-3">
-                   <img src="design 12.jpg">
-               </div> 
-               <div class="col-3">
-                  <img src="dress.jpeg">
-               </div> 
-               <div class="col-3">
-                   <img src="design%203.jpg">
-               </div> 
-           </div>
-       </div>
-     </div>
+     <div class="w3-row-padding">
+  <div class="w3-container w3-third">
+    <img src="design%2012.jpg" style="width:80%;cursor:pointer" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+  </div>
+  <div class="w3-container w3-third">
+    <img src="dress.jpeg" style="width:80%;cursor:pointer" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+  </div>
+  <div class="w3-container w3-third">
+    <img src="design%203.jpg" style="width:80%;cursor:pointer" 
+    onclick="onClick(this)" class="w3-hover-opacity">
+      <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+  <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+  <div class="w3-modal-content w3-animate-zoom">
+    <img id="img01" style="width:100%">
+  </div>
+</div>
+  </div>
+         
+</div>
+    
        
 <!-------------- Our Featured Products -------------->
     
@@ -118,6 +130,8 @@
                </div> 
                <div class="col-4">
                     <a href="add-cart.html"><img id="myImg" src="Design.png" alt="Snow" style="width: 100%;max-width: 300px"></a>
+                   
+                   
                     <div id="myModal" class="modal">
 
   <!-- The Close Button -->
@@ -622,6 +636,10 @@
                 MenuItems.style.maxHeight = "0px"
             } 
     }
+    function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+    
     
 </script>
 
