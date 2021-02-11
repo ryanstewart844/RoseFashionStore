@@ -162,6 +162,61 @@ body{
 
 
 
+<style type="text/css">
+    html,
+    body {
+      height: 100vh;
+      width: 100vh;
+    }
+
+    .my-container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      width:100vh;
+    }
+
+    .my-container>.top [class^="col-"],
+    .my-container>.bottom [class^="col-"] {
+      background-color: #929292  ;
+      color: white;
+      text-align: center;
+    }
+
+    .my-container>.middle {
+      flex-grow: 1;
+      padding:30px;
+      background-image: url('images/bg6.jpg');
+      background-size: cover;
+    }
+
+    .my-container>.middle>* {
+    }
+
+    #clock{
+        /*background-color:#333;*/
+        font-family: sans-serif;
+        font-size:40px;
+        text-shadow:0px 0px 1px #fff;
+        color:#fff;
+    }
+    #clock span {
+        color:#fff;
+        font-size:40px;
+        position:relative;
+
+    }
+    #date {
+      margin-top: -10px;
+        letter-spacing:3px;
+        font-size:20px;
+        font-family:arial,sans-serif;
+        color:#fff;
+    }
+  </style>
+
+
+
 
 
 
